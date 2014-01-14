@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %title TodoApp
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    = favicon_link_tag 'favicon.ico'
+    %link{href: "http://fonts.googleapis.com/css?family=Droid+Serif:400,700", rel: "stylesheet", type: "text/css"}/
+  %body
+    %header
+      .title
+        %h1= link_to  "Todo or Not Todo", root_path
+    #flash_notice
+      = flash[:notice]
+    #flash_warning
+      = flash[:warning]
+    = yield
+

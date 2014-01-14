@@ -7,6 +7,7 @@ gem 'puma'
 gem 'simple_form'
 gem 'turbolinks'
 gem 'newrelic_rpm'
+gem "haml"
 
 group :test do
   gem 'shoulda'

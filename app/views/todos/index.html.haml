@@ -1,0 +1,15 @@
+#create_todos
+  %h2.title Create a New Todo
+  = simple_form_for @todo  do |f|
+    = f.input :title, placeholder: 'Title', label: false
+    = f.button :submit, id: "todo_button"
+#todos
+  - if @todos and @todos.length
+    %h2.title Current Todo Lists
+    - @todos.each do |todo|
+      %ul
+        %li
+          = link_to todo.title.capitalize, todo_url(todo)
+          = link_to 'X', todo_url(todo),  method: :delete, :confirm => 'Are you sure?', remote: true, class: 'delete_entry'
+  - else
+    %h3 You currently do not have any reviews, please create one above
