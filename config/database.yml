@@ -1,0 +1,21 @@
+connection: &connection
+  adapter: postgresql
+  host: localhost
+  pool: 5
+  timeout: 5000
+  min_messages: warning
+
+development: &development
+  <<: *connection
+  database: todo_app_dev
+
+test: &test
+  <<: *connection
+  database: todo_app_test
+
+production: &production
+  <<: *connection
+  database: todo_app
+
+
+

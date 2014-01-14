@@ -1,0 +1,25 @@
+<div id='create_todos'>
+  <h2 class='title'>Create a New Todo</h2>
+
+  <%= simple_form_for @todo  do |f| %>
+    <%= f.input :title, placeholder: 'Title', label: false %>
+    <%= f.button :submit, id: "todo_button"  %>
+  <% end %>
+</div>
+
+<div id='todos'>
+  <% if @todos and @todos.length%>
+    <h2 class='title'> Current Todo Lists </h2>
+    <% @todos.each do |todo| %>
+      <ul>
+        <li>
+          <%= link_to todo.title.capitalize, todo_url(todo) %>
+          <%= link_to 'X', todo_url(todo),  method: :delete, :confirm => 'Are you sure?', remote: true, class: 'delete_entry' %>
+        </li>
+      </ul>
+    <%end %>
+  <% else %>
+    <h3> You currently do not have any reviews, please create one above</h3>
+  <%end %>
+</div>
+

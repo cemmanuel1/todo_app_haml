@@ -1,0 +1,69 @@
+<div class="title">
+  <% if @todo %>
+  <h1> <%= @todo.title %>  </h1>
+  <%end %>
+</div>
+
+<div id="task_box">
+  <% if @todo.tasks.count > 0 %>
+    <% @todo.tasks.each do |task| %>
+      <% if task.task_item != nil %>
+        <ul>
+          <%= simple_form_for [@todo, task] do |f| %>
+            <% if task.complete == true %>
+               <li>
+                <%= f.input :complete, label: false  %>
+                <span class="completed_task">
+                <%= task.task_item  %>
+                </span>
+                <%= link_to 'X', [@todo, task], method: :delete, :confirm => 'Are you sure?', remote: true, class: 'delete_entry' %>
+              </li>
+              <hr>
+            <% else %>
+              <li>
+                <%= f.input :complete, label: false %>
+                <%= task.task_item %>
+                <%= link_to 'X', [@todo, task], method: :delete, :confirm => 'Are you sure?', remote: true, class: 'delete_entry' %>
+              </li>
+              <hr>
+            <% end %>
+          <% end %>
+        </ul>
+      <% end %>
+    <% end %>
+  <% else %>
+    <p class= 'title'> Please add your first task below</p>
+  <%end %>
+
+  <%= simple_form_for [@todo, @task] do |f| %>
+    <%= f.input :task_item, placeholder: 'New Task Item', label: false %>
+    <%= f.button :submit, "Add", id: "task_button" %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

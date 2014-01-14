@@ -1,0 +1,153 @@
+/*General*/
+body {
+  font-family: 'Droid Serif', serif;
+}
+
+header {
+  background: url('checklist.jpg');
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  margin-top: -25px;
+  margin-bottom: 5%;
+}
+
+.title {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header h1 a, header h1 a:visited {
+  color: white;
+  margin-top: 40px;
+  font-size: 2.5em;
+}
+
+header h1 a:hover {
+  color: #dcdcdc;
+}
+
+#flash_notice {
+  color: green;
+}
+
+#flash_warning {
+  color: red;
+}
+
+/*Todo & Task Page*/
+#todos, #task_box, #create_todos {
+  border: solid 1px;
+  border-radius:  8px;
+  box-shadow: 8px 8px 5px #888888;
+  margin: 0 auto;
+  width: 60%;
+}
+
+#task_box, #create_todos {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+/*input forms&buttons*/
+input[type=text]{
+  border-radius: 5px;
+  height: 2em;
+}
+
+input[type=text]:focus {
+  border: 1px solid #77B3D8;
+  -moz-box-shadow: 0 0 7px #C8E0EF;
+  -webkit-box-shadow: 0 0 7px #C8E0EF;
+  -o-box-shadow: 0 0 7px #C8E0EF;
+  -ms-box-shadow: 0 0 7px #C8E0EF;
+  box-shadow: 0 0 7px #C8E0EF;
+}
+
+#todo_title, #task_task_item {
+ float: left;
+ margin: 10px 2% 0 10%;
+}
+
+#todo_button, #task_button {
+ float: left;
+ margin: 9px 0 0 2%;
+ border-radius: 6px;
+ border: 1px solid #dcdcdc;
+ font-size: 15px;
+ font-weight: bold;
+ height: 1.9em;
+ text-align: center;
+ text-shadow: 1px 1px 0px #dcdcdc;
+ -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+ -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+ box-shadow: inset 0px 1px 0px 0px #ffffff;
+ background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+ background: -moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+ background-color: #ededed;
+}
+
+#todo_button:hover, #task_button:hover {
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background: -moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color: #dfdfdf;
+}
+
+
+/*Todo Page */
+#todos, #task_box {
+  margin-top: 8%;
+  width: 45%;
+}
+
+input#todo_title {
+  margin-left: 1%;
+  width: 65%;
+}
+
+/*Task Page*/
+.task_complete {
+  display: inline;
+}
+
+.completed_task {
+  text-decoration: line-through;
+  color: grey;
+}
+
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.delete_entry {
+  float: right;
+  margin-right: 10px;
+  color: red;
+}
+
+.delete_entry:hover {
+  color: #880000;
+}
+
+input#task_task_item {
+  margin-left: 2%;
+  width: 75%;
+}
+
+
+
+
+
+
+
+
