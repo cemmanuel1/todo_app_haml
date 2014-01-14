@@ -1,4 +1,7 @@
+
 # Todo or Not Todo
+
+Converting a previously created todo app to use HAML instead of ERB
 
 #### Description
 Todo app that allows you to create lists and tasks.
@@ -22,3 +25,4 @@ In Terminal run:
 bundle install
 
 rails s puma
+
